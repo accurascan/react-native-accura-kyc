@@ -1,6 +1,6 @@
 {
   "name": "react-native-accura-kyc",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "This package is for digital user verification system powered by Accura Scan. ",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -37,7 +37,7 @@
     "android"
   ],
   "repository": "https://github.com/accurascan/react-native-accura-kyc",
-  "author": "Anil Chudasama <34017992+anil1997-accurascan@users.noreply.github.com> (https://github.com/anil1997-accurascan)",
+  "author": "Anil Chudasama <anil1997-accurascan@users.noreply.github.com> (https://github.com/anil1997-accurascan)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/accurascan/react-native-accura-kyc/issues"
