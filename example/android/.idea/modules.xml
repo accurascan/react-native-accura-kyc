@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AccuraKyc.iml" filepath="$PROJECT_DIR$/.idea/modules/AccuraKyc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AccuraKyc.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AccuraKyc.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2094953684/AccuraKyc.reactnativeaccurakyc.iml" filepath="$PROJECT_DIR$/.idea/modules/2094953684/AccuraKyc.reactnativeaccurakyc.iml" />
+    </modules>
+  </component>
+</project>

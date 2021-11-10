@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.gms:play-services-vision:20.1.3@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fc4562318f190d0563e35e34039c4798/play-services-vision-20.1.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6ba1bed25b2088a959efbef2f1fb4086/play-services-vision-20.1.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/67ecb3650b014f0607166b69cdec498c/play-services-vision-20.1.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/15c565a370f13ed3e336709299d9ecdb/play-services-vision-20.1.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/15c565a370f13ed3e336709299d9ecdb/play-services-vision-20.1.3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/15c565a370f13ed3e336709299d9ecdb/play-services-vision-20.1.3/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-vision/20.1.3/f9ca4b36a6c632ccbacc85be5f5ba8601348202e/play-services-vision-20.1.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

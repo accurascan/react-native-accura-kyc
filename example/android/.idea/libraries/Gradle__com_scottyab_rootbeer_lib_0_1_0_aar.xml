@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.scottyab:rootbeer-lib:0.1.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9e02b92e7762d96ed8fe2798d0ab7807/rootbeer-lib-0.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f54af465c89604de22a30960b6b6aaf/rootbeer-lib-0.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b68b0a70c7356e4db496c8f4b620acb/rootbeer-lib-0.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dff0678a934aebe85247285a2e8601ec/rootbeer-lib-0.1.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dff0678a934aebe85247285a2e8601ec/rootbeer-lib-0.1.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dff0678a934aebe85247285a2e8601ec/rootbeer-lib-0.1.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.scottyab/rootbeer-lib/0.1.0/b8b04834efdcbd43e3d9967d5090c0244d69a02a/rootbeer-lib-0.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

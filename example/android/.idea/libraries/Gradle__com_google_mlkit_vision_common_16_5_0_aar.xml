@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.mlkit:vision-common:16.5.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/84f6f5ca68f85124aa63fd6af6b74b11/vision-common-16.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f6fe6df4ecc5723caa992e3ef93a6ef7/vision-common-16.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b7254a6922423d8f94e7381ffed45451/vision-common-16.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/db30ddffed054feaa5b1d73f5495029a/vision-common-16.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/db30ddffed054feaa5b1d73f5495029a/vision-common-16.5.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/db30ddffed054feaa5b1d73f5495029a/vision-common-16.5.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.mlkit/vision-common/16.5.0/890e185cbcb78c40e5c6c8eaeff03771f041559c/vision-common-16.5.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

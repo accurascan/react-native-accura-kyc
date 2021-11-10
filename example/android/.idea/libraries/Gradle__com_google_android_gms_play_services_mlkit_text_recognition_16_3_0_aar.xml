@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.gms:play-services-mlkit-text-recognition:16.3.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ee8b8d34c3710f175adc15470f86b3a0/play-services-mlkit-text-recognition-16.3.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/471584d96f305354cef534d17e7cf6fe/play-services-mlkit-text-recognition-16.3.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c8ba60c2b260371fad6f9822318dee06/play-services-mlkit-text-recognition-16.3.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/62c496dfa912abe1b0373950f911e05b/play-services-mlkit-text-recognition-16.3.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/62c496dfa912abe1b0373950f911e05b/play-services-mlkit-text-recognition-16.3.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/62c496dfa912abe1b0373950f911e05b/play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-mlkit-text-recognition/16.3.0/2721e6c50bcfefd7b4fa3d98a7d655d2b53e4fd7/play-services-mlkit-text-recognition-16.3.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

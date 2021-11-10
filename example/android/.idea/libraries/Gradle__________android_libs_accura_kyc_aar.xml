@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: ./../../android/libs/accura_kyc.aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/045e1585f65a84404c7989ee481b4596/accura_kyc/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/045e1585f65a84404c7989ee481b4596/accura_kyc/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/045e1585f65a84404c7989ee481b4596/accura_kyc/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0747da6e92aa1842b1a007c336355d80/accura_kyc/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0747da6e92aa1842b1a007c336355d80/accura_kyc/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0747da6e92aa1842b1a007c336355d80/accura_kyc/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
