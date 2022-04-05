@@ -68,6 +68,7 @@ export default class App extends React.Component {
     };
   }
 
+  //Code for get permissions of access into Android devices.
   requestPermissions = async () => {
     try {
       const granted = await PermissionsAndroid.requestMultiple([PermissionsAndroid.PERMISSIONS.CAMERA, PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE, PermissionsAndroid.PERMISSIONS.RECORD_AUDIO]);
@@ -84,6 +85,7 @@ export default class App extends React.Component {
     }
   };
 
+  //Code for check camrera permissions of access into Android devices.
   checkRequestCameraPermission = async () => {
     const granted = await PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.CAMERA);
     if (granted === PermissionsAndroid.RESULTS.GRANTED) {
@@ -95,6 +97,7 @@ export default class App extends React.Component {
     }
   }
 
+  //Code for check exter storage permissions of access into Android devices.
   checkRequestWritePermission = async () => {
     const granted = await PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE);
     if (granted === PermissionsAndroid.RESULTS.GRANTED) {
@@ -123,6 +126,7 @@ export default class App extends React.Component {
     }
   }
 
+  //Code for setup message & config into document scanning window.
   setUpCustomMessages = () => {
 
     var config = {
@@ -154,6 +158,7 @@ export default class App extends React.Component {
       SCAN_TITLE_MRZ_PDF417_BACK: this.language == 'en' ? 'Now Scan Back Side of Document' : 'الآن مسح الجانب الخلفي من المستند',
       SCAN_TITLE_DLPLATE: this.language == 'en' ? 'Scan Number Plate' : 'مسح رقم اللوحة'
     };
+    //Method for setup config into native OS.
     AccuraKyc.setupAccuraConfig([config], (error, response) => {
       if (error != null) {
         console.log("Failur!", error);
@@ -163,18 +168,16 @@ export default class App extends React.Component {
     })
   }
 
+  //Code for get license info.
   getAccuraSetup = () => {
 
+    //Method for get license info from native OS.
     AccuraKyc.getMetaData((error, response) => {
       if (error != null) {
         console.log("Failur!", error);
         this.setState({ isLoading: false })
       } else {
         res = this.getResultJSON(response)
-        console.log("JSON:- ", response)
-        // console.log("JSON:- ", res.countries)
-        // console.log("JSON:- ", res.countries[0].cards)
-
         var newContries = []
         res?.countries?.map(item => newContries = [...newContries, { label: item.name, value: item.id }])
 
@@ -185,14 +188,8 @@ export default class App extends React.Component {
     })
   }
 
-  componentWillUnmount = () => {
-
-  }
-
   showAlert = ((title, message) => {
 
-    // Toast.showWithGravity(message, Toast.LONG, Toast.TOP);
-    // Toast.show(message, Toast.LONG);
     if (Platform.OS == 'ios') {
       Alert.alert(title, message, [{ text: "OK", onPress: () => console.log("Cancel Pressed"), style: "cancel" }])
     } else {
@@ -202,7 +199,6 @@ export default class App extends React.Component {
 
   getResultJSON = (jsonString) => {
 
-    console.log("JSON String:- ", jsonString)
     var json;
     try {
       json = eval(jsonString);
@@ -222,6 +218,7 @@ export default class App extends React.Component {
     return null;
   }
 
+  //Code for scan OCR documents with country & card info.
   onPressOCR = () => {
 
     var isValid = true
@@ -238,20 +235,20 @@ export default class App extends React.Component {
     if (isValid) {
 
       let passArgs = [{ enableLogs: false }, this.countrySelected.id, this.cardSelected.id, this.cardSelected.name, this.cardSelected.type, getOrientation()] //[{"enableLogs":false},1,41,"Emirates National ID",0,"portrait-primary"]
-      console.log("passArgs:- ", passArgs)
+      //Method for start OCR scaning from native OS.
       AccuraKyc.startOcrWithCard(passArgs, (error, response) => {
         if (error != null) {
           console.log("Failur!", error);
           this.showAlert("Failur!", error)
         } else {
           res = this.getResultJSON(response)
-          console.log("JSON:- ", res)
           this.setState({ modalVisible: true, objScanRes: res })
         }
       })
     }
   }
 
+  //Code for scan MRZ documents with document type.
   onPressMRZ = () => {
 
     var isValid = true
@@ -263,24 +260,23 @@ export default class App extends React.Component {
     if (isValid) {
 
       let passArgs = [{ enableLogs: false }, this.mrzSelected, this.mrzCountryList, getOrientation()]
-      console.log("passArgs:- ", passArgs)
+      //Method for start MRZ scaning from native OS.
       AccuraKyc.startMRZ(passArgs, (error, response) => {
         if (error != null) {
           console.log("Failur!", error);
           this.showAlert("Failur!", error)
         } else {
           res = this.getResultJSON(response)
-          console.log("JSON:- ", res)
           this.setState({ modalVisible: true, objScanRes: res })
         }
       })
     }
   }
 
+  //Code for scan Barcode with barcode type.
   onPressBarcode = () => {
 
     var isValid = true
-    console.log("this.barcodeSelected:- ", this.barcodeSelected)
     if (this.barcodeSelected?.toString() == "") {
       this.setState({ isValidBarcodeType: false })
       isValid = false
@@ -289,36 +285,36 @@ export default class App extends React.Component {
     if (isValid) {
 
       let passArgs = [{ enableLogs: false }, this.barcodeSelected, getOrientation()]
-      console.log("passArgs:- ", passArgs)
+      //Method for start MRZ scaning from native OS.
       AccuraKyc.startBarcode(passArgs, (error, response) => {
         if (error != null) {
           console.log("Failur!", error);
           this.showAlert("Failur!", error)
         } else {
           res = this.getResultJSON(response)
-          console.log("JSON:- ", res)
           this.setState({ modalVisible: true, objScanRes: res })
         }
       });
     }
   }
 
+  //Code for scan bank card.
   onPressBankcard = () => {
 
     let passArgs = [{ enableLogs: false }, getOrientation()]
-    console.log("passArgs:- ", passArgs)
+    //Method for start bank card scaning from native OS.
     AccuraKyc.startBankCard(passArgs, (error, response) => {
       if (error != null) {
         console.log("Failur!", error);
         this.showAlert("Failur!", error)
       } else {
         res = this.getResultJSON(response)
-        console.log("JSON:- ", res)
         this.setState({ modalVisible: true, objScanRes: res })
       }
     });
   }
 
+  //Code for check liveness.
   onPressStartLiveness = () => {
 
     var accuraConfs = { enableLogs: false, with_face: true, face_uri: this.facematchURI };
@@ -357,7 +353,7 @@ export default class App extends React.Component {
     };
 
     let passArgs = [accuraConfs, config, getOrientation()]
-    console.log("passArgs:- ", passArgs)
+    //Method for start liveness checking from native OS.
     AccuraKyc.startLiveness(passArgs, (error, response) => {
       if (error != null) {
         console.log("Failur!", error);
@@ -365,12 +361,12 @@ export default class App extends React.Component {
         this.setState({ modalVisible: true })
       } else {
         res = this.getResultJSON(response)
-        console.log("JSON:- ", res)
         this.setState({ fm_score: res.fm_score, lv_score: res.score, secondImageURI: res.image_uri, modalVisible: true })
       }
     });
   }
 
+  //Code for check face match.
   onPressFaceMatch = (withFace = false, face1 = false, face2 = false) => {
 
     var accuraConfs = { with_face: withFace, face_uri: this.facematchURI, enableLogs: false };
@@ -402,14 +398,13 @@ export default class App extends React.Component {
       feedBackProcessingMessage: this.language == 'en' ? 'Processing...' : 'يعالج...',
     };
     let passArgs = [accuraConfs, config, getOrientation()]
-    console.log("passArgs:- ", passArgs)
+    //Method for start face match checking from native OS.
     AccuraKyc.startFaceMatch(passArgs, (error, response) => {
       if (error != null) {
         console.log("Failur!", error);
         this.showAlert("Failur!", error)
         this.setState({ modalVisible: true })
       } else {
-        console.log("JSON:- ", response)
         res = this.getResultJSON(response)
         this.setState({ fm_score: res.score, lv_score: 0.0, secondImageURI: res.detect, modalVisible: true })
       }
@@ -428,6 +423,7 @@ export default class App extends React.Component {
             :
             <>
               {
+                //UI for scanning options
                 <SafeAreaView>
                   <ScrollView>
                     <View style={styles.container}>
@@ -512,7 +508,6 @@ export default class App extends React.Component {
                                     }}
                                   />
                                   {!this.state.isValidBarcodeType ? <Text style={styles.lblError}>{'Please select barcode type first.'}</Text> : <View />}
-                                  {/* <Text style={{ color: 'white', textAlign: 'center' }}>{'You can scan any barcode here by tap on "Start Barcode" button.'}</Text> */}
                                   <TouchableOpacity style={styles.optionButton} onPress={this.onPressBarcode} >
                                     <Text style={styles.optionButtonText}>Start Barcode</Text>
                                   </TouchableOpacity>
@@ -548,6 +543,7 @@ export default class App extends React.Component {
     );
   }
 
+  //Code for display result popup when complete scanning.
   generateResult = (result) => {
 
     if (result == undefined || result == null) {
@@ -690,13 +686,6 @@ export default class App extends React.Component {
                   (result.hasOwnProperty('mrz_data')) ?
                     (Object.keys(result.mrz_data).length > 0) ?
                       <>
-                        {/* result.mrz_data.hasOwnProperty("MRZ") ?
-                          <View style={styles.dataItem}>
-                            <Text style={styles.lblDataTitle}>{'MRZ'}</Text>
-                            <Text style={styles.lblDataText}>{result[side][key].toString()}</Text>
-                          </View>
-                        :
-                        <View /> */}
                         <View style={styles.dataHeader}>
                           <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{'MRZ'}</Text>
                         </View>
@@ -744,33 +733,6 @@ export default class App extends React.Component {
                   :
                   <View />
               }
-
-              {/* <View style={{  }}>
-                <View style={styles.dataHeader}>
-                  <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{'MRZ'}</Text>
-                </View>
-                <View style={styles.dataItem}>
-                  <Text style={styles.lblDataTitle}>{'MRZ'}</Text>
-                  <Text style={styles.lblDataText}>{'P<TTOERIKSSON<<ANNA<MARIA<<<<<<<<<<<<<<<<<<<L898902C36TTO7408122M1204159ZE184226B<<<<<10'}</Text>
-                </View>
-                <View style={styles.dataItem}>
-                  <Text style={styles.lblDataTitle}>{'MRZ'}</Text>
-                  <Image style={styles.signatureImage} source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/9/9b/Toni_Schumacher_-_Signatur.jpg' }} />
-                </View>
-                <View style={styles.dataHeader}>
-                  <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{'FRONT SIDE'}</Text>
-                </View>
-                <View style={{ marginVertical: 10, borderRadius: 10 }}>
-                  <Image style={styles.cardImage} source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/9/9b/Toni_Schumacher_-_Signatur.jpg' }} />
-                </View>
-                <View style={styles.dataHeader}>
-                  <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{'BACK SIDE'}</Text>
-                </View>
-                <View style={{ marginVertical: 10, borderRadius: 10 }}>
-                  <Image style={styles.cardImage} source={{ uri: 'https://aw.visa.com/dam/VCOM/regional/lac/ENG/Default/Pay%20With%20Visa/Find%20a%20Card/Debit%20Cards/Visa%20Debit%20Gold/debit-gold-eng-640x404.jpg' }} />
-                </View>
-              </View> */}
-
             </View>
           </ScrollView>
         </View>

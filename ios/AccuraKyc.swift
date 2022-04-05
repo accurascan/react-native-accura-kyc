@@ -30,7 +30,7 @@ class AccuraKyc: NSObject {
     @objc
        func constantsToExport() -> [String: Any]! {
        return ["is_active_accura_kyc": true]
-     }
+    }
 
     static func cleanFaceData() {
         gl.face1 = nil
@@ -109,11 +109,13 @@ class AccuraKyc: NSObject {
        return image1
    }
 
+    //Code for clear facematch data
     @objc(cleanFaceMatch:)
     func cleanFM(callBack: RCTResponseSenderBlock) {
         AccuraKyc.cleanFaceData()
     }
 
+    //Code for get license info from framework.
     @objc(getMetaData:)
     func getMetaData(_ callback: @escaping RCTResponseSenderBlock) {
 
@@ -180,6 +182,7 @@ class AccuraKyc: NSObject {
         }
     }
 
+    //Code for setup custom messages and config.
     @objc(setupAccuraConfig:callback:)
     func setupAccuraConfig(_ argsNew: NSArray, callback: @escaping RCTResponseSenderBlock) {
 
@@ -190,18 +193,15 @@ class AccuraKyc: NSObject {
         self.goNativeCallBack!([NSNull(), "Messages setup successfully"])
     }
     
+    //Code for start MRZ document scanning with document type.
     @objc(startMRZ:callback:)
     func startMRZ(_ argsNew: NSArray, callback: @escaping RCTResponseSenderBlock) {
 
         self.goNativeCallBack = callback;
         self.goNativeArgs = argsNew;
-    
-//    @objc func startMRZ() {
-//        gl.ocrClId = command.callbackId
         ScanConfigs.accuraConfigs = self.goNativeArgs[0] as! [String: Any]
         ScanConfigs.mrzType = self.goNativeArgs[1] as! String
         ScanConfigs.mrzCountryList = self.goNativeArgs[2] as! String
-//        ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs[3] as! String
         ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs.count > 3 ? self.goNativeArgs[3] as! String : self.defaultAppOriantation
         gl.type = "mrz"
         DispatchQueue.main.async {
@@ -225,21 +225,19 @@ class AccuraKyc: NSObject {
         }
     }
     
+    //Code for start bank card scanning.
     @objc(startBankCard:callback:)
     func startBankCard(_ argsNew: NSArray, callback: @escaping RCTResponseSenderBlock) {
 
         self.goNativeCallBack = callback;
         self.goNativeArgs = argsNew;
-//    @objc func startBankCard() {
         gl.type = "bankcard"
         ScanConfigs.accuraConfigs = self.goNativeArgs[0] as! [String: Any]
-//        ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs[1] as! String
         ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs.count > 1 ? self.goNativeArgs[1] as! String : self.defaultAppOriantation
         DispatchQueue.main.async {
             let viewController = UIStoryboard(name: "MainStoryboard_iPhone", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
             viewController.callBack = self.goNativeCallBack
             viewController.isCheckScanOCR = true
-    //        viewController.countryid = 31
             viewController.cardType = 3
             viewController.reactViewController = self.viewController
             viewController.win = self.viewControllerWindow
@@ -247,16 +245,15 @@ class AccuraKyc: NSObject {
         }
     }
 
+    //Code for start barcode scanning with type.
     @objc(startBarcode:callback:)
     func startBarcode(_ argsNew: NSArray, callback: @escaping RCTResponseSenderBlock) {
 
         self.goNativeCallBack = callback;
         self.goNativeArgs = argsNew;
-//    @objc func startBarcode() {
         gl.type = "barcode"
         ScanConfigs.accuraConfigs = self.goNativeArgs[0] as! [String: Any]
         ScanConfigs.barcodeType = self.goNativeArgs[1] as! String
-//        ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs[2] as! String
         ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs.count > 2 ? self.goNativeArgs[2] as! String : self.defaultAppOriantation
         DispatchQueue.main.async {
             let viewController = UIStoryboard(name: "MainStoryboard_iPhone", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
@@ -268,20 +265,18 @@ class AccuraKyc: NSObject {
         }
     }
 
-    
+    //Code for start OCR document scanning with country & card info.
     @objc(startOcrWithCard:callback:)
     func startOcrWithCard(_ argsNew: NSArray, callback: @escaping RCTResponseSenderBlock) {
 
         self.goNativeCallBack = callback;
         self.goNativeArgs = argsNew;
-//    @objc func startOcrWithCard() {
         gl.type = "ocr"
         ScanConfigs.accuraConfigs = self.goNativeArgs[0] as! [String: Any]
         ScanConfigs.CountryId = self.goNativeArgs[1] as! Int
         ScanConfigs.CardId = self.goNativeArgs[2] as! Int
         ScanConfigs.CardName = self.goNativeArgs[3] as! String
         ScanConfigs.CardType = self.goNativeArgs[4] as! Int
-//        ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs[5] as! String
         ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs.count > 5 ? self.goNativeArgs[5] as! String : self.defaultAppOriantation
         DispatchQueue.main.async {
             let viewController = UIStoryboard(name: "MainStoryboard_iPhone", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
@@ -300,12 +295,12 @@ class AccuraKyc: NSObject {
         }
     }
 
+    //Code for start liveness check.
     @objc(startLiveness:callback:)
     func startLiveness(_ argsNew: NSArray, callback: @escaping RCTResponseSenderBlock) {
 
         self.goNativeCallBack = callback;
         self.goNativeArgs = argsNew;
-//    @objc func startLiveness() {
         //set liveness url
         gl.type = "lv"
         gl.face1 = nil
@@ -314,7 +309,6 @@ class AccuraKyc: NSObject {
         gl.face2Detect = nil
         gl.withFace = true
         ScanConfigs.accuraConfigs = self.goNativeArgs[0] as! [String: Any]
-//        ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs[2] as! String
         ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs.count > 2 ? self.goNativeArgs[2] as! String : self.defaultAppOriantation
         DispatchQueue.main.async {
             let LVController = UIStoryboard(name: "MainStoryboard_iPhone", bundle: nil).instantiateViewController(withIdentifier: "LVController") as! LVController
@@ -327,12 +321,12 @@ class AccuraKyc: NSObject {
         }
     }
 
+    //Code for start face match check.
     @objc(startFaceMatch:callback:)
     func startFaceMatch(_ argsNew: NSArray, callback: @escaping RCTResponseSenderBlock) {
 
         self.goNativeCallBack = callback;
         self.goNativeArgs = argsNew;
-//    @objc func startFaceMatch() {
         gl.type = "fm"
         gl.withFace = true
         let fmInit = EngineWrapper.isEngineInit()
@@ -348,7 +342,6 @@ class AccuraKyc: NSObject {
             return
         }
         ScanConfigs.accuraConfigs = self.goNativeArgs[0] as! [String: Any]
-//        ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs[2] as! String
         ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs.count > 2 ? self.goNativeArgs[2] as! String : self.defaultAppOriantation
         DispatchQueue.main.async {
             let FMController = UIStoryboard(name: "MainStoryboard_iPhone", bundle: nil).instantiateViewController(withIdentifier: "FMController") as! FMController

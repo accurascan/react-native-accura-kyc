@@ -5,6 +5,7 @@
 #import <React/RCTLog.h>
 #import <React/RCTUtils.h>
 
+//Module file of all RN extern method that you can call from RN
 @interface RCT_EXTERN_MODULE(AccuraKyc, NSObject)
 
 RCT_EXTERN_METHOD(execute:(NSString *)action argsNew:(NSArray *)argsNew callback:(RCTResponseSenderBlock)callback)

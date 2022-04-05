@@ -2,6 +2,7 @@ import UIKit
 import AccuraKYC
 import AVFoundation
 
+//View controller for check liveness.
 class LVController: UIViewController
 {
     var livenessConfigs:[String: Any] = [:]

@@ -1,6 +1,7 @@
 import UIKit
 import AccuraKYC
 
+//View controller for check face match between two faces.
 class FMController: UIViewController {
     
     var livenessConfigs:[String: Any] = [:]

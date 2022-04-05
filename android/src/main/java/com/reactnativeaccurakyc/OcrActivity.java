@@ -55,6 +55,7 @@ import java.util.List;
 import static com.reactnativeaccurakyc.AccuraKycModule.getImageUri;
 import static com.reactnativeaccurakyc.AccuraKycModule.getSaltString;
 
+//Activity for scanning document window.
 public class OcrActivity extends SensorsActivity implements OcrCallback {
 
     private static final String TAG = OcrActivity.class.getSimpleName();
