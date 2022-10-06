@@ -41,6 +41,8 @@ android.iml
 example/ios/Pods
 example/ios/Podfile.lock
 
+example/android/local.properties
+
 # node.js
 #
 node_modules/

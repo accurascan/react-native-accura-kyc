@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
 
   s.dependency "React-Core"
   s.static_framework = true
-  s.dependency "AccuraKYC-Hybrid","2.3.2" 
-  # s.dependency "AccuraKYC-Hybrid-sim", "2.3.3"
+  s.dependency "AccuraKYC-Hybrid","3.0.2" 
+  # s.dependency "AccuraKYC-Hybrid-sim", "3.1.1"
 end

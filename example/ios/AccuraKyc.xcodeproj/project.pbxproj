@@ -16,9 +16,9 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* AccuraKycTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AccuraKycTests.m */; };
-		77387ABC26F0AAAF00349A27 /* accuraactiveliveness.license in Resources */ = {isa = PBXBuildFile; fileRef = 77387AB926F0AAAF00349A27 /* accuraactiveliveness.license */; };
-		77387ABD26F0AAAF00349A27 /* key.license in Resources */ = {isa = PBXBuildFile; fileRef = 77387ABA26F0AAAF00349A27 /* key.license */; };
-		77387ABE26F0AAAF00349A27 /* accuraface.license in Resources */ = {isa = PBXBuildFile; fileRef = 77387ABB26F0AAAF00349A27 /* accuraface.license */; };
+		7367A4DA28EECD84008C6CE2 /* accuraface.license in Resources */ = {isa = PBXBuildFile; fileRef = 7367A4D728EECD84008C6CE2 /* accuraface.license */; };
+		7367A4DB28EECD84008C6CE2 /* accuraactiveliveness.license in Resources */ = {isa = PBXBuildFile; fileRef = 7367A4D828EECD84008C6CE2 /* accuraactiveliveness.license */; };
+		7367A4DC28EECD84008C6CE2 /* key.license in Resources */ = {isa = PBXBuildFile; fileRef = 7367A4D928EECD84008C6CE2 /* key.license */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -52,9 +52,9 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AccuraKyc/main.m; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* AccuraKyc-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccuraKyc-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* AccuraKyc-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AccuraKyc-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		77387AB926F0AAAF00349A27 /* accuraactiveliveness.license */ = {isa = PBXFileReference; lastKnownFileType = file; path = accuraactiveliveness.license; sourceTree = "<group>"; };
-		77387ABA26F0AAAF00349A27 /* key.license */ = {isa = PBXFileReference; lastKnownFileType = file; path = key.license; sourceTree = "<group>"; };
-		77387ABB26F0AAAF00349A27 /* accuraface.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = accuraface.license; sourceTree = "<group>"; };
+		7367A4D728EECD84008C6CE2 /* accuraface.license */ = {isa = PBXFileReference; lastKnownFileType = file; name = accuraface.license; path = AccuraKyc/accuraface.license; sourceTree = "<group>"; };
+		7367A4D828EECD84008C6CE2 /* accuraactiveliveness.license */ = {isa = PBXFileReference; lastKnownFileType = file; name = accuraactiveliveness.license; path = AccuraKyc/accuraactiveliveness.license; sourceTree = "<group>"; };
+		7367A4D928EECD84008C6CE2 /* key.license */ = {isa = PBXFileReference; lastKnownFileType = file; name = key.license; path = AccuraKyc/key.license; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AccuraKyc/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83A2F0BE0262BB4E43E9875A /* Pods-AccuraKyc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuraKyc.debug.xcconfig"; path = "Target Support Files/Pods-AccuraKyc/Pods-AccuraKyc.debug.xcconfig"; sourceTree = "<group>"; };
 		B4EF1B6FB399F0E6001E8C78 /* Pods-AccuraKyc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuraKyc.release.xcconfig"; path = "Target Support Files/Pods-AccuraKyc/Pods-AccuraKyc.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,10 +120,10 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				7367A4D828EECD84008C6CE2 /* accuraactiveliveness.license */,
+				7367A4D728EECD84008C6CE2 /* accuraface.license */,
+				7367A4D928EECD84008C6CE2 /* key.license */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				77387AB926F0AAAF00349A27 /* accuraactiveliveness.license */,
-				77387ABB26F0AAAF00349A27 /* accuraface.license */,
-				77387ABA26F0AAAF00349A27 /* key.license */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
@@ -323,11 +323,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7367A4DC28EECD84008C6CE2 /* key.license in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
-				77387ABD26F0AAAF00349A27 /* key.license in Resources */,
+				7367A4DB28EECD84008C6CE2 /* accuraactiveliveness.license in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				77387ABE26F0AAAF00349A27 /* accuraface.license in Resources */,
-				77387ABC26F0AAAF00349A27 /* accuraactiveliveness.license in Resources */,
+				7367A4DA28EECD84008C6CE2 /* accuraface.license in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

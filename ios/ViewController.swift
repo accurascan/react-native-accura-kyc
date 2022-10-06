@@ -1774,6 +1774,7 @@ extension ViewController: VideoCameraWrapperDelegate {
                 msg = ScanConfigs.SCAN_TITLE_OCR_FRONT
                 if ScanConfigs.accuraMessagesConfigs.index(forKey: "SCAN_TITLE_OCR_FRONT") != nil {
                     msg = ScanConfigs.accuraMessagesConfigs["SCAN_TITLE_OCR_FRONT"] as! String
+                    msg = "\(msg) %@"
                 }
 //                if isNeedBackSideFirst() {
 //                    msg = ScanConfigs.SCAN_TITLE_OCR_BACK
@@ -1787,6 +1788,7 @@ extension ViewController: VideoCameraWrapperDelegate {
                 msg = ScanConfigs.SCAN_TITLE_OCR_BACK
                 if ScanConfigs.accuraMessagesConfigs.index(forKey: "SCAN_TITLE_OCR_BACK") != nil {
                     msg = ScanConfigs.accuraMessagesConfigs["SCAN_TITLE_OCR_BACK"] as! String
+                    msg = "\(msg) %@"
                 }
 //                if isNeedBackSideFirst() {
 //                    msg = ScanConfigs.SCAN_TITLE_OCR_FRONT
@@ -1800,6 +1802,7 @@ extension ViewController: VideoCameraWrapperDelegate {
                 msg = ScanConfigs.SCAN_TITLE_OCR
                 if ScanConfigs.accuraMessagesConfigs.index(forKey: "SCAN_TITLE_OCR") != nil {
                     msg = ScanConfigs.accuraMessagesConfigs["SCAN_TITLE_OCR"] as! String
+                    msg = "\(msg) %@"
                 }
                 msg = msg.replacingOccurrences(of: "%@", with: docName)
                 break
@@ -2631,6 +2634,11 @@ extension ViewController: VideoCameraWrapperDelegate {
             msg = AccuraErrorType.ACCURA_ERROR_CODE_VISA_MRZ
             if (ScanConfigs.accuraMessagesConfigs.index(forKey: "ACCURA_ERROR_CODE_VISA_MRZ") != nil) {
                 msg = ScanConfigs.accuraMessagesConfigs["ACCURA_ERROR_CODE_VISA_MRZ"] as! String
+            }
+        } else if(message == ACCURA_ERROR_CODE_WRONG_SIDE) {
+            msg = AccuraErrorType.ACCURA_ERROR_CODE_WRONG_SIDE
+            if (ScanConfigs.accuraConfigs.index(forKey: "ACCURA_ERROR_CODE_WRONG_SIDE") != nil) {
+                msg = ScanConfigs.accuraConfigs["ACCURA_ERROR_CODE_WRONG_SIDE"] as! String
             }
         } else {
             msg = message

@@ -418,7 +418,7 @@ class AccuraKyc: NSObject {
         if let theJSONData = try?  JSONSerialization.data( withJSONObject: results, options: .prettyPrinted ),
           let theJSONText = String(data: theJSONData, encoding: String.Encoding.ascii) {
               print("JSON string = \n\(theJSONText)")
-            return theJSONText.components(separatedBy: .whitespacesAndNewlines).joined();
+            return theJSONText.components(separatedBy: .newlines).joined();
         }
         return "{}"
     }
