@@ -1,6 +1,6 @@
 {
   "name": "react-native-accura-kyc",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This package is for digital user verification system powered by Accura Scan. ",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
