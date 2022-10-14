@@ -62,16 +62,14 @@ android {
     }
 
     packagingOptions {
-        pickFirst 'lib/arm64-v8a/libcrypto.so'
-        pickFirst 'lib/arm64-v8a/libssl.so'
-
-        pickFirst 'lib/armeabi-v7a/libcrypto.so'
-        pickFirst 'lib/armeabi-v7a/libssl.so'
-
         pickFirst 'lib/x86/libcrypto.so'
-        pickFirst 'lib/x86/libssl.so'
-
         pickFirst 'lib/x86_64/libcrypto.so'
+        pickFirst 'lib/arm64-v8a/libcrypto.so'
+        pickFirst 'lib/armeabi-v7a/libcrypto.so'
+
+        pickFirst 'lib/armeabi-v7a/libssl.so'
+        pickFirst 'lib/arm64-v8a/libssl.so'
+        pickFirst 'lib/x86/libssl.so'
         pickFirst 'lib/x86_64/libssl.so'
 
         pickFirst '**/libjsc.so'
@@ -81,10 +79,11 @@ android {
         pickFirst 'lib/x86_64/libc++_shared.so'
         pickFirst 'lib/armeabi-v7a/libc++_shared.so'
         pickFirst 'lib/arm64-v8a/libc++_shared.so'
+
         pickFirst 'lib/armeabi-v7a/libopencv_java4.so'
         pickFirst 'lib/arm64-v8a/libopencv_java4.so'
-
-        pickFirst 'lib/armeabi-v7a/libaccurasdk.so'
+        pickFirst 'lib/x86/libopencv_java4.so'
+        pickFirst 'lib/x86_64/libopencv_java4.so'
     }
 
 }

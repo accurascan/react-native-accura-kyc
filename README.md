@@ -55,15 +55,43 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     packagingOptions {
+        pickFirst 'lib/x86/libcrypto.so'
+        pickFirst 'lib/x86_64/libcrypto.so'
+        pickFirst 'lib/arm64-v8a/libcrypto.so'
+        pickFirst 'lib/armeabi-v7a/libcrypto.so'
+
+        pickFirst 'lib/armeabi-v7a/libssl.so'
+        pickFirst 'lib/arm64-v8a/libssl.so'
+        pickFirst 'lib/x86/libssl.so'
+        pickFirst 'lib/x86_64/libssl.so'
+
+        pickFirst '/libjsc.so'
+        pickFirst '/libc++_shared.so'
+
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+
         pickFirst 'lib/armeabi-v7a/libopencv_java4.so'
         pickFirst 'lib/arm64-v8a/libopencv_java4.so'
-        pickFirst 'lib/arm64-v8a/libc++_shared.so'
-        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/x86/libopencv_java4.so'
+        pickFirst 'lib/x86_64/libopencv_java4.so'
     }
 }
 ```
 
 ## Setup iOS
+
+### Please install git-lfs & nvm into your mac before install pod.
+ ```sh
+brew install git-lfs
+git clone https://github.com/nvm-sh/nvm.git 
+~/.nvm
+source ~/.nvm/nvm.sh
+nvm alias default system
+ ```
+
 ### Add this permissions into iOS Info.plist file.
 ```sh
 <key>NSCameraUsageDescription</key>
