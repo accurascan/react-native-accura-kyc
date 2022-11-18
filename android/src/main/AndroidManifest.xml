@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.reactnativeaccurakyc">
+          package="com.accurakyc">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -8,8 +8,8 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application >
-        <activity android:name="com.reactnativeaccurakyc.OcrActivity" android:screenOrientation="locked" android:theme="@style/AppTheme" />
-        <activity android:name="com.reactnativeaccurakyc.FaceMatchActivity" android:screenOrientation="locked" android:theme="@style/AppTheme" />
+        <activity android:name="com.accurakyc.OcrActivity" android:screenOrientation="locked" android:theme="@style/AppTheme" />
+        <activity android:name="com.accurakyc.FaceMatchActivity" android:screenOrientation="locked" android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

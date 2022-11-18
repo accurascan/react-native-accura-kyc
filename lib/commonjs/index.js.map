@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 {"version":3,"names":["AccuraKyc","NativeModules"],"sources":["index.tsx"],"sourcesContent":["import { NativeModules } from 'react-native';\n\nconst { AccuraKyc } = NativeModules;\n\nexport default AccuraKyc;\n"],"mappings":";;;;;;AAAA;AAEA,MAAM;EAAEA;AAAU,CAAC,GAAGC,0BAAa;AAAC,eAErBD,SAAS;AAAA"}
+=======
+{"version":3,"names":["AccuraKyc","NativeModules"],"sourceRoot":"../../src","sources":["index.tsx"],"mappings":";;;;;;AAAA;AAEA,MAAM;EAAEA;AAAU,CAAC,GAAGC,0BAAa;AAAC,eAErBD,SAAS;AAAA"}
+>>>>>>> Stashed changes

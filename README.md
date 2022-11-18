@@ -35,6 +35,10 @@ allprojects {
     repositories {
         ...
         jcenter()
+        maven {
+            url 'https://jitpack.io'
+            credentials { username 'jp_45kf9tvkijvd9c7cf34mehj1b6' }
+        }
     }
 }
 ```
@@ -55,43 +59,53 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     packagingOptions {
-        pickFirst 'lib/x86/libcrypto.so'
-        pickFirst 'lib/x86_64/libcrypto.so'
         pickFirst 'lib/arm64-v8a/libcrypto.so'
-        pickFirst 'lib/armeabi-v7a/libcrypto.so'
-
-        pickFirst 'lib/armeabi-v7a/libssl.so'
         pickFirst 'lib/arm64-v8a/libssl.so'
+
+        pickFirst 'lib/armeabi-v7a/libcrypto.so'
+        pickFirst 'lib/armeabi-v7a/libssl.so'
+
+        pickFirst 'lib/x86/libcrypto.so'
         pickFirst 'lib/x86/libssl.so'
+
+        pickFirst 'lib/x86_64/libcrypto.so'
         pickFirst 'lib/x86_64/libssl.so'
 
-        pickFirst '/libjsc.so'
-        pickFirst '/libc++_shared.so'
+        pickFirst '**/libjsc.so'
+        pickFirst '**/libc++_shared.so'
 
         pickFirst 'lib/x86/libc++_shared.so'
         pickFirst 'lib/x86_64/libc++_shared.so'
         pickFirst 'lib/armeabi-v7a/libc++_shared.so'
         pickFirst 'lib/arm64-v8a/libc++_shared.so'
 
+        pickFirst 'lib/x86/libopencv_java4.so'
         pickFirst 'lib/armeabi-v7a/libopencv_java4.so'
         pickFirst 'lib/arm64-v8a/libopencv_java4.so'
-        pickFirst 'lib/x86/libopencv_java4.so'
         pickFirst 'lib/x86_64/libopencv_java4.so'
+        pickFirst 'lib/armeabi-v7a/libopencv_java4.so'
+
+        pickFirst 'lib/armeabi-v7a/libaccurasdk.so'
+        pickFirst 'lib/arm64-v8a/libaccurasdk.so'
+        pickFirst 'lib/armeabi-v7a/libaccuraface.so'
+        pickFirst 'lib/arm64-v8a/libaccuraface.so'
+        pickFirst 'lib/armeabi-v7a/libaccuraliveness.so'
+        pickFirst 'lib/arm64-v8a/libaccuraliveness.so'
     }
 }
 ```
 
 ## Setup iOS
+### Please make sure to install git-lfs into your Mac.
+**Open your mac terminal and fire following command**
 
-### Please install git-lfs & nvm into your mac before install pod.
- ```sh
+```sh
 brew install git-lfs
-git clone https://github.com/nvm-sh/nvm.git 
-~/.nvm
-source ~/.nvm/nvm.sh
-nvm alias default system
- ```
 
+or
+
+port install git-lfs
+```
 ### Add this permissions into iOS Info.plist file.
 ```sh
 <key>NSCameraUsageDescription</key>

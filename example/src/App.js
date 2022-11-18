@@ -17,7 +17,7 @@ import {
   PermissionsAndroid,
 } from 'react-native';
 import AccuraKyc from 'react-native-accura-kyc';
-import { Dropdown } from 'react-native-material-dropdown-v2';
+import { Dropdown } from 'react-native-material-dropdown-no-proptypes';
 import Toast from 'react-native-simple-toast';
 
 const getOrientation = () => {

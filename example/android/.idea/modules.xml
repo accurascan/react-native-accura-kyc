@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AccuraKycExample.iml" filepath="$PROJECT_DIR$/.idea/modules/AccuraKycExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AccuraKycExample.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AccuraKycExample.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AccuraKycExample.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AccuraKycExample.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AccuraKycExample.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AccuraKycExample.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AccuraKycExample.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AccuraKycExample.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1073872870/AccuraKycExample.react-native-accura-kyc.iml" filepath="$PROJECT_DIR$/.idea/modules/-1073872870/AccuraKycExample.react-native-accura-kyc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1073872870/AccuraKycExample.react-native-accura-kyc.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1073872870/AccuraKycExample.react-native-accura-kyc.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1073872870/AccuraKycExample.react-native-accura-kyc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1073872870/AccuraKycExample.react-native-accura-kyc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1073872870/AccuraKycExample.react-native-accura-kyc.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1073872870/AccuraKycExample.react-native-accura-kyc.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2095420860/react-native-gradle-plugin.iml" filepath="$PROJECT_DIR$/.idea/modules/2095420860/react-native-gradle-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2095420860/react-native-gradle-plugin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/2095420860/react-native-gradle-plugin.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2095420860/react-native-gradle-plugin.test.iml" filepath="$PROJECT_DIR$/.idea/modules/2095420860/react-native-gradle-plugin.test.iml" />
+    </modules>
+  </component>
+</project>
